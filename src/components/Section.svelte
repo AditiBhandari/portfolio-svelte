@@ -1,9 +1,8 @@
 <script>
-	export let name;
-	import Section from './components/Section.svelte';
-	import StoryCard from './components/StoryCard.svelte';
+	export let sectionTitle;
+	import StoryCard from './StoryCard.svelte';
 
-	let myStories = [
+	let stories = [
 		{
 			"section": "online",
 			"link": "https://graphics.reuters.com/CHINA-CRASH/znvneqennpl/index.html",
@@ -31,33 +30,9 @@
 	];
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-
-	<Section sectionTitle="Intro"></Section>
-
-
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<section>
+	<h2>{sectionTitle}</h2>
+	{#each stories as {slug, title, link, description, skills, publication, date, thumbnail}}
+		<StoryCard slug={slug} title={title} link={link} description={description} skills={skills} publication={publication} date={date} thumbnail={thumbnail}></StoryCard>
+	{/each}
+</section>
