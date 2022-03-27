@@ -7,21 +7,10 @@ html, body {
 }
 
 body {
-	height: 100%;
-	min-height: 100%;
-	width: 80%;
-	max-width: 1200px;
-	margin: 0 auto;
-	font-size: 1em;
 	font-family: 'Open Sans', sans-serif;
-	font-style: normal;
 	background-color: #fafafa;
 }
 
-
-label {
-	display: block;
-}
 
 /* TEXT STYLES */
 section.intro > p > a.intro_link {
@@ -34,5 +23,17 @@ section.intro > p > a.intro_link {
 }
 
 a.intro_link:hover {
+	border-bottom: solid 4px #227f7f;
+}
+
+.sample_text_link {
+	font-weight: 600;
+	color: inherit;
+	text-decoration: none;
+	border-bottom: solid 2px #227f7f;
+	transition: border-bottom ease-in-out 0.1s;
+}
+
+.sample_text_link:hover {
 	border-bottom: solid 4px #227f7f;
 }

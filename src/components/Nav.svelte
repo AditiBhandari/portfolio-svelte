@@ -33,8 +33,8 @@
 	<a class="menu_home_link" href="index.html"><h1 class="menu_home_button">aditi bhandari</h1></a>
 
 	<ul class="menu_list">
-		<li class="menu_button"><h2><a class="menu_link" href=".">work</a></h2></li>
-		<li class="menu_button"><h2><a class="menu_link" href=".">projects</a></h2></li>
+		<li class="menu_button"><h2><a class="page_link" href=".">work</a></h2></li>
+		<li class="menu_button"><h2><a class="page_link" href=".">projects</a></h2></li>
 	</ul>
 
 	<ul class="menu_list">
@@ -51,7 +51,12 @@
 </nav>
 
 <style>
-	.menu { margin-bottom: 20px; }
+	.menu {
+		margin-bottom: 20px;
+		width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	.menu_list {
 		padding: 0;
@@ -84,12 +89,19 @@
 		transition: color ease-in-out 0.1s;
 	}
 
-	.menu_link {
-		font-size: 1em;
+	.page_link, .menu_link {
 		color: #737373;
 	}
 
-	.menu_link, .menu_home_link {
+	.page_link {
+		font-size: 1em;
+	}
+
+	.menu_link {
+		font-size: 1.5em;
+	}
+
+	.page_link, .menu_link, .menu_home_link {
 		font-family: 'Biryani', sans-serif;
 		font-style: normal;
 		font-weight: 300;
@@ -104,7 +116,7 @@
 
 	.menu_home_link:hover { color: #227f7f; }
 
-	.menu_link:hover {
+	.menu_link:hover, .page_link:hover {
 		border-bottom: solid 4px #227f7f;
 		transition: border-bottom ease-in-out 0.1s;
 	}
